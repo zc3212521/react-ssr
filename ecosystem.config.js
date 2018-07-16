@@ -8,7 +8,7 @@ module.exports = {
     // First application
     {
       name      : 'API',
-      script    : './src/app.js',
+      script    : './src/index.js',
       env: {
           NODE_ENV: 'development'
       },
@@ -18,10 +18,10 @@ module.exports = {
     },
 
     // Second application
-    {
-      name      : 'WEB',
-      script    : 'web.js'
-    }
+    // {
+    //   name      : 'WEB',
+    //   script    : 'web.js'
+    // }
   ],
 
   /**
@@ -30,19 +30,19 @@ module.exports = {
    */
   deploy : {
     production : {
-      user : 'node',
-      host : '212.83.163.1',
+      user : 'root',
+      host : '192.168.2.171',
       ref  : 'origin/master',
-      repo : 'git@github.com:repo.git',
+      repo : 'git@github.com:zc3212521/react-ssr.git',
       path : '/var/www/production',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
+      'post-deploy' : 'cnpm install && pm2 reload ecosystem.config.js --env production'
     },
     dev : {
-      user : 'node',
-      host : '212.83.163.1',
+      user : 'root',
+      host : '192.168.2.171',
       ref  : 'origin/master',
-      repo : 'git@github.com:repo.git',
-      path : '/var/www/development',
+      repo : 'git@github.com:zc3212521/react-ssr.git',
+      path : '/var/www/dev',
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env dev',
       env  : {
         NODE_ENV: 'dev'
