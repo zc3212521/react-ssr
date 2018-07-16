@@ -34,7 +34,7 @@ module.exports = {
       host : '192.168.2.171',
       ref  : 'origin/master',
       repo : 'https://github.com/zc3212521/react-ssr.git',
-      path : '/var/www/production',
+      path : '/var/www/test',
       'post-deploy' : 'cnpm install && pm2 reload ecosystem.config.js --env production'
     },
     dev : {
