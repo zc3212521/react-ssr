@@ -8,7 +8,7 @@ function template (data) {
 </head>
 <body>
 	<h1>hello world!</h1>
-	<p>当前环境111： ${data.env}</p>
+	<p>当前环境222： ${data.env}</p>
 </body>
 </html>
     `
