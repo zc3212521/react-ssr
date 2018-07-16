@@ -35,7 +35,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:zc3212521/react-ssr.git',
       path : '/var/www/production',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
+      'post-deploy' : 'cnpm install && pm2 reload ecosystem.config.js --env production'
     },
     dev : {
       user : 'root',
