@@ -5,9 +5,9 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        index: './src/index.js'
+        index: './src/main.js'
     },
-    target: 'node',
+    // target: 'node',
     module: {
         rules: [
             {
@@ -42,13 +42,13 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
-        // new HtmlWebpackPlugin({
-        //     title: 'Production'
-        // })
+        new HtmlWebpackPlugin({
+            title: 'Production'
+        })
     ],
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
-        libraryTarget: 'commonjs2'
+        // libraryTarget: 'commonjs2'
     }
 };
