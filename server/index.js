@@ -3,7 +3,6 @@ const app = express()
 const template = require('./template')
 const bodyParser = require('body-parser')
 
-
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 

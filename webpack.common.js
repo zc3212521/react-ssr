@@ -1,15 +1,18 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        index: './src/main.js'
+        index: './src/app.js'
     },
     // target: 'node',
     module: {
         rules: [
+            {
+                test: /.jsx$/,
+                use: ['babel-loader',],
+            },
             {
                 test: /\.js$/,
                 use: [
@@ -40,10 +43,16 @@ module.exports = {
             }
         ]
     },
+    resolve: {
+      extensions: ['.js', '.jsx'],
+      alias: {
+          type: path.resolve(__dirname, './src/store/type.js'),
+      }
+    },
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            title: 'Production'
+            template: './src/index.html',
         })
     ],
     output: {

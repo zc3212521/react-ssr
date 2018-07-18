@@ -1,3 +1,15 @@
 {
-  "presets": ["env", "react"]
+  "presets": ["env", "react"],
+  "plugins": [
+    ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }],
+    ["transform-imports", {
+      "lodash": {
+        "transform": "lodash/${member}",
+        "preventFullImport": true
+      }
+    }],
+    "transform-decorators-legacy",
+    "react-hot-loader/babel",
+    "css-modules-transform"
+  ]
 }
