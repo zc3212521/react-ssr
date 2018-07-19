@@ -1,14 +1,13 @@
 import type from 'type'
 
-const groupNum = (data) => ({
-    type: type.main.group_num,
-    data: data
-})
-
-const getGroupNum = () => (dispatch) => {
-    dispatch(groupNum(10))
+export const addNum = () => dispatch => {
+    dispatch({
+        type: type.page1.add_num,
+    })
 }
 
-export default {
-    getGroupNum
+export const removeNum = () => dispatch => {
+    dispatch({
+        type: type.page1.remove_num,
+    })
 }

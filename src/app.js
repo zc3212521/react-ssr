@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom'
 import configureStore from './store/store'
 import reducer from './store/reducer'
 
-const store = configureStore(reducer)
+const store = configureStore(reducer, 'client')
 import App from './view/App'
 
 const render = Component => {
