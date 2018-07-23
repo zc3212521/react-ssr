@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        index: './src/app.js'
+        index: path.join(__dirname, '../client/src/app.js')
     },
     // target: 'node',
     module: {
@@ -46,13 +46,13 @@ module.exports = {
     resolve: {
       extensions: ['.js', '.jsx'],
       alias: {
-          type: path.resolve(__dirname, './src/store/type.js'),
+          type: path.resolve(__dirname, '../client/src/store/type.js'),
       }
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            template: './src/index.html',
+            template: path.join(__dirname, '../client/src/index.html'),
         })
     ],
     output: {

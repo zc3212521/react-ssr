@@ -4,7 +4,7 @@
   "description": "",
   "prvite": true,
   "scripts": {
-    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "start": "webpack-dev-server --open --config ./build/webpack.dev.js",
     "build": "webpack --config webpack.common.js"
   },
   "repository": {
