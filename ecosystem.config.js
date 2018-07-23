@@ -16,7 +16,6 @@ module.exports = {
         NODE_ENV: 'production'
       }
     },
-
     // Second application
     // {
     //   name      : 'WEB',
