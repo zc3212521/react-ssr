@@ -8,7 +8,7 @@ module.exports = {
     // First application
     {
       name      : 'test',
-      script    : './src/index.js',
+      script    : './server/index.js',
       env: {
           NODE_ENV: 'development'
       },
