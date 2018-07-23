@@ -9,9 +9,9 @@ module.exports = {
         {
             name: 'test',
             script: './server/index.js',
-            // "instances": "-1",
-            "exec_mode": "cluster",
-            "max_memory_restart": "2000M",
+            instances: 0,
+            exec_mode: "cluster",
+            max_memory_restart: "2000M",
             env: {
                 NODE_ENV: 'development'
             },
