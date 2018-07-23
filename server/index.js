@@ -14,7 +14,7 @@ app.post('/api/data',function(req, res) {
     res.send('name' + req.body.name, 201)
 })
 app.get('/api/info', function (req, res) {
-    res.send('lalala')
+    res.send('lalala222')
 })
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'))
